@@ -114,44 +114,6 @@
       text-align: center;
     }
 
-    .features-grid {
-      display: flex;
-      flex-wrap: wrap;
-      justify-content: space-around;
-      gap: 2rem;
-    }
-
-    .feature-box {
-      flex: 1 1 250px;
-      max-width: 300px;
-      background: #f9f9f9;
-      border-radius: 8px;
-      padding: 1.5rem;
-      box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1);
-    }
-
-    .feature-box i {
-      font-size: 40px;
-      color: var(--primary-color);
-      margin-bottom: 1rem;
-      transition: transform 0.3s ease-in-out;
-    }
-
-    .feature-box:hover i {
-      transform: scale(1.2);
-    }
-
-    .feature-box h5 {
-      margin: 0.5rem 0;
-      font-size: 1.3rem;
-      color: #222;
-    }
-
-    .feature-box p {
-      font-size: 1rem;
-      color: #555;
-    }
-
     footer {
       background-color: var(--dark-bg);
       color: #ccc;
@@ -162,8 +124,44 @@
   </style>
 </head>
 <body>
-  <!-- ... contenu inchangé au-dessus ... -->
+  <div id="top-banner">
+    <div class="social-links">
+      <a href="https://www.instagram.com/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
+      <a href="https://www.linkedin.com/in/vincent-tota-b5bb84257/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
+    </div>
+    <div class="lang-switcher">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="Français" class="flag" onclick="setLanguage('fr')">
+      <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg" alt="English" class="flag" onclick="setLanguage('en')">
+    </div>
+  </div>
 
+  <header>
+    <img src="Original%20Logo.png" alt="Logo">
+    <p class="animated-text">Get in the best shape of your life.</p>
+    <a href="#start" class="button">Start your Coaching</a>
+  </header>
+
+  <section class="section" id="start" style="display: flex; align-items: center; justify-content: space-between; gap: 2rem; flex-wrap: wrap;">
+    <div style="flex: 1; min-width: 280px; text-align: center;">
+      <h2>Créer le besoin</h2>
+      <p>Tu n'es pas satisfait de ton physique actuel ? Tu mérites mieux que ça. C'est le moment de prendre les choses en main.</p>
+    </div>
+    <div style="flex: 1; min-width: 280px; text-align: right;">
+      <img src="https://raw.githubusercontent.com/VINCITHEG/Coaching/main/freepik__the-style-is-candid-image-photography-with-natural__6488.jpeg" alt="Homme regardant son reflet" style="max-width: 250px; width: 100%; height: auto; border-radius: 8px;">
+    </div>
+  </section>
+
+  <section class="section" id="repondre-au-besoin">
+    <h2>Répondre au besoin</h2>
+    <ul style="list-style: none; padding-left: 0; max-width: 600px; margin: 0 auto; text-align: left; font-size: 1.1rem;">
+      <li style="margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; font-weight: 600; color: #222;"><i class="fas fa-dumbbell" style="color: var(--primary-color); font-size: 28px;"></i> Programme personnalisé (salle ou maison)</li>
+      <li style="margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; font-weight: 600; color: #222;"><i class="fas fa-utensils" style="color: var(--primary-color); font-size: 28px;"></i> Suivi nutritionnel adapté</li>
+      <li style="margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; font-weight: 600; color: #222;"><i class="fas fa-comments" style="color: var(--primary-color); font-size: 28px;"></i> Accès privé à Messenger Pro 24h/24</li>
+      <li style="margin-bottom: 1.2rem; display: flex; align-items: center; gap: 1rem; font-weight: 600; color: #222;"><i class="fas fa-video" style="color: var(--primary-color); font-size: 28px;"></i> 1 appel visio par mois pour faire le point</li>
+    </ul>
+  </section>
+
+  <!-- SECTION TEAM WINDHAM -->
   <section class="section" style="background-color: #000; color: #fff; padding: 4rem 2rem;">
     <h3 style="font-family: 'Bangers', cursive; font-size: 2.5rem; text-align: center;">Welcome to Team Windham</h3>
     <div style="text-align: center; margin-top: 1rem;">
