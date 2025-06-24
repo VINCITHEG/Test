@@ -134,6 +134,11 @@
       font-size: 40px;
       color: var(--primary-color);
       margin-bottom: 1rem;
+      transition: transform 0.3s ease-in-out;
+    }
+
+    .feature-box:hover i {
+      transform: scale(1.2);
     }
 
     .feature-box h5 {
@@ -157,70 +162,32 @@
   </style>
 </head>
 <body>
-  <div id="top-banner">
-    <div class="social-links">
-      <a href="https://www.instagram.com/" class="social-icon" target="_blank"><i class="fab fa-instagram"></i></a>
-      <a href="https://www.linkedin.com/in/vincent-tota-b5bb84257/" class="social-icon" target="_blank"><i class="fab fa-linkedin"></i></a>
-    </div>
-    <div class="lang-switcher">
-      <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="Français" class="flag" onclick="setLanguage('fr')">
-      <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg" alt="English" class="flag" onclick="setLanguage('en')">
-    </div>
-  </div>
+  <!-- ... contenu inchangé au-dessus ... -->
 
-  <header>
-    <img src="Original%20Logo.png" alt="Logo">
-    <p class="animated-text">Get in the best shape of your life.</p>
-    <a href="#start" class="button">Start your Coaching</a>
-  </header>
-
-  <section class="section" id="start" style="display: flex; align-items: center; justify-content: center; gap: 2rem; flex-wrap: wrap;">
-    <div style="flex: 1; min-width: 280px; text-align: center;">
-      <h2>Créer le besoin</h2>
-      <p>Tu n'es pas satisfait de ton physique actuel ? Tu mérites mieux que ça. C'est le moment de prendre les choses en main.</p>
-    </div>
-    <div style="flex: 1; min-width: 280px; text-align: center;">
-      <img src="https://raw.githubusercontent.com/VINCITHEG/Coaching/main/freepik__the-style-is-candid-image-photography-with-natural__6488.jpeg"
-           alt="Homme regardant son reflet"
-           style="max-width: 250px; width: 100%; height: auto; border-radius: 8px; margin-left: auto;">
-    </div>
-  </section>
-
-  <section class="section" id="repondre-au-besoin">
-    <h2>Répondre au besoin</h2>
-    <ul>
-      <li><i class="fas fa-dumbbell"></i> Programme personnalisé (salle ou maison)</li>
-      <li><i class="fas fa-utensils"></i> Suivi nutritionnel adapté</li>
-      <li><i class="fas fa-comments"></i> Accès privé à Messenger Pro 24h/24</li>
-      <li><i class="fas fa-video"></i> 1 appel visio par mois pour faire le point</li>
-    </ul>
-  </section>
-
-  <!-- SECTION TEAM WINDHAM EXACTE -->
   <section class="section" style="background-color: #000; color: #fff; padding: 4rem 2rem;">
     <h3 style="font-family: 'Bangers', cursive; font-size: 2.5rem; text-align: center;">Welcome to Team Windham</h3>
     <div style="text-align: center; margin-top: 1rem;">
       <i class="fas fa-smile" style="font-size: 20px;"></i>
     </div>
     <div style="display: flex; flex-wrap: wrap; justify-content: center; gap: 2rem; margin-top: 3rem;">
-      <div style="background-color: #222; padding: 2rem; border-radius: 8px; max-width: 300px; flex: 1; text-align: center;">
-        <i class="fas fa-apple-alt" style="font-size: 40px; color: #ff6347;"></i>
-        <h5 style="margin-top: 1rem;">Nutritional Coaching</h5>
+      <div class="feature-box" style="background-color: #222; color: #fff;">
+        <i class="fas fa-apple-alt"></i>
+        <h5>Nutritional Coaching</h5>
         <p>Custom nutrition plans are written for you to help you achieve your goals.</p>
       </div>
-      <div style="background-color: #222; padding: 2rem; border-radius: 8px; max-width: 300px; flex: 1; text-align: center;">
-        <i class="fas fa-dumbbell" style="font-size: 40px; color: #ff6347;"></i>
-        <h5 style="margin-top: 1rem;">Programming</h5>
+      <div class="feature-box" style="background-color: #222; color: #fff;">
+        <i class="fas fa-dumbbell"></i>
+        <h5>Programming</h5>
         <p>Custom programs are written and constantly evolving along with you for continued success.</p>
       </div>
-      <div style="background-color: #222; padding: 2rem; border-radius: 8px; max-width: 300px; flex: 1; text-align: center;">
-        <i class="fas fa-user" style="font-size: 40px; color: #ff6347;"></i>
-        <h5 style="margin-top: 1rem;">Virtual Coaching</h5>
+      <div class="feature-box" style="background-color: #222; color: #fff;">
+        <i class="fas fa-user"></i>
+        <h5>Virtual Coaching</h5>
         <p>In addition to custom programming, you will receive one-on-one feedback on all your lifts.</p>
       </div>
-      <div style="background-color: #222; padding: 2rem; border-radius: 8px; max-width: 300px; flex: 1; text-align: center;">
-        <i class="fas fa-headset" style="font-size: 40px; color: #ff6347;"></i>
-        <h5 style="margin-top: 1rem;">Unlimited Support</h5>
+      <div class="feature-box" style="background-color: #222; color: #fff;">
+        <i class="fas fa-headset"></i>
+        <h5>Unlimited Support</h5>
         <p>Team Windham is dedicated to providing a positive support system for each and every athlete.</p>
       </div>
     </div>
