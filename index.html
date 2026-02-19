@@ -72,6 +72,9 @@
   .testimonial.visible { opacity:1; transform:translateY(0); }
   .testimonial cite { display:block; margin-top:1rem; font-style:normal; font-weight:bold; color:var(--primary); }
 
+  /* Paypal wrapper */
+  #paypal-wrapper { display:flex; justify-content:center; margin-top:20px; }
+
   /* Footer */
   footer { background: var(--bg-dark); color: #fff; text-align:center; padding:1.5rem; margin-top:2rem; border-top: 3px solid var(--primary); }
 
@@ -123,7 +126,9 @@
 
 <section class="section">
   <h2>Paiement</h2>
-  <div id="paypal-button-container"></div>
+  <div id="paypal-wrapper">
+    <div id="paypal-button-container"></div>
+  </div>
 </section>
 
 <footer>© 2025 Megastrength Coaching</footer>
