@@ -2,9 +2,185 @@
 <html lang="fr">
 <head>
   <meta charset="UTF-8">
-  <title>Test GitHub Pages</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Megastrength Coaching</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://fonts.googleapis.com/css2?family=Bangers&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --primary-color: #cc0000;
+      --dark-bg: #111;
+      --text-color: #fff;
+      --light-bg: #f4f4f4;
+    }
+
+    html { scroll-behavior: smooth; }
+
+    body {
+      margin: 0;
+      font-family: Arial, sans-serif;
+      background-color: var(--light-bg);
+      color: #333;
+    }
+
+    #top-banner {
+      position: fixed;
+      top: 0;
+      width: 100%;
+      background-color: var(--dark-bg);
+      color: var(--text-color);
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      padding: 0.5rem 2rem;
+      z-index: 1000;
+      font-size: 0.9rem;
+      border-bottom: 1px solid #fff;
+    }
+
+    #top-banner .lang-switcher img {
+      width: 24px;
+      height: 16px;
+      cursor: pointer;
+      margin-left: 10px;
+      border: 2px solid var(--dark-bg);
+      border-radius: 2px;
+      transition: 0.3s;
+    }
+    #top-banner .lang-switcher img:hover { border-color: var(--primary-color); }
+
+    header {
+      background-color: var(--dark-bg);
+      color: var(--text-color);
+      padding: 6rem 2rem 3rem;
+      text-align: center;
+      margin-top: 48px;
+    }
+
+    header p.animated-text {
+      font-family: 'Bangers', cursive;
+      font-size: 3rem;
+      letter-spacing: 2px;
+      animation: pulse 2.5s infinite;
+    }
+    @keyframes pulse { 0%,100% { transform: scale(1); } 50% { transform: scale(1.05); } }
+
+    .button {
+      display: inline-block;
+      margin-top: 1.5rem;
+      padding: 0.8rem 1.5rem;
+      background-color: var(--primary-color);
+      color: white;
+      text-decoration: none;
+      border-radius: 5px;
+      font-weight: bold;
+      transition: 0.3s ease;
+    }
+    .button:hover { transform: scale(1.05); }
+
+    .section {
+      padding: 2rem;
+      max-width: 1000px;
+      margin: 2rem auto;
+      background-color: white;
+      border-radius: 8px;
+      box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+      text-align: center;
+    }
+
+    footer {
+      background-color: var(--dark-bg);
+      color: #ccc;
+      text-align: center;
+      padding: 1rem;
+    }
+  </style>
 </head>
 <body>
-  <h1>Ça marche ! 🚀</h1>
+
+  <div id="top-banner">
+    <div>Megastrength Coaching</div>
+    <div class="lang-switcher">
+      <img src="https://upload.wikimedia.org/wikipedia/en/c/c3/Flag_of_France.svg" alt="Français" onclick="setLanguage('fr')">
+      <img src="https://upload.wikimedia.org/wikipedia/en/b/be/Flag_of_England.svg" alt="English" onclick="setLanguage('en')">
+    </div>
+  </div>
+
+  <header>
+    <p class="animated-text">Transforme ton corps. Domine ta vie.</p>
+    <a href="#start" class="button">Commencer</a>
+  </header>
+
+  <section id="start" class="section">
+    <h2>Créer le besoin</h2>
+    <p>
+      Tu n'as pas de résultat parce que tu n'as pas de plan.  
+      Tu manques de discipline ? C’est normal. Ensemble, on va tout changer.
+    </p>
+  </section>
+
+  <section class="section">
+    <h2>Pourquoi moi ?</h2>
+    <p>
+      Coach diplômé STAPS et kiné en formation.  
+      Je ne te donne pas un programme générique.  
+      Je crée un plan basé sur la science, la performance et la discipline.
+    </p>
+  </section>
+
+  <section class="section" id="repondre-au-besoin">
+    <h2>Ce que tu reçois</h2>
+    <ul style="list-style:none; padding-left:0;">
+      <li><i class="fas fa-dumbbell" style="color:var(--primary-color)"></i> Programme personnalisé</li>
+      <li><i class="fas fa-utensils" style="color:var(--primary-color)"></i> Suivi nutritionnel adapté</li>
+      <li><i class="fas fa-comments" style="color:var(--primary-color)"></i> Accès privé 24h/24</li>
+      <li><i class="fas fa-video" style="color:var(--primary-color)"></i> 1 appel visio / mois</li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>PayPal</h2>
+    <div id="paypal-button-container"></div>
+  </section>
+
+  <footer>
+    © 2025 Megastrength Coaching
+  </footer>
+
+  <script src="https://www.paypal.com/sdk/js?client-id=ATz7jqElMUdkVCdnOzqlSKp7XSGq2nLnAysZAHkcIbaCzDqqwJb7e5KZyCXPUBnzqcfZJpkoNV_AYQmE&vault=true&intent=subscription"></script>
+  <script>
+    const translations = {
+      fr: {
+        hero: "Transforme ton corps. Domine ta vie.",
+        startBtn: "Commencer",
+        createNeed: "Créer le besoin",
+        respondNeed: "Ce que tu reçois",
+        contact: "Me contacter"
+      },
+      en: {
+        hero: "Transform your body. Dominate your life.",
+        startBtn: "Start",
+        createNeed: "Create the Need",
+        respondNeed: "What you get",
+        contact: "Contact Me"
+      }
+    };
+
+    function setLanguage(lang){
+      document.querySelector(".animated-text").innerText = translations[lang].hero;
+      document.querySelector(".button").innerText = translations[lang].startBtn;
+      document.querySelector("#start h2").innerText = translations[lang].createNeed;
+      document.querySelector("#repondre-au-besoin h2").innerText = translations[lang].respondNeed;
+    }
+
+    paypal.Buttons({
+      style: { shape: 'rect', color:'gold', layout:'vertical', label:'subscribe' },
+      createSubscription: function(data, actions){
+        return actions.subscription.create({ plan_id: 'P-8NX22352W50340619M4F5CUI' });
+      },
+      onApprove: function(data, actions){ alert("Subscription ID: " + data.subscriptionID); }
+    }).render('#paypal-button-container');
+  </script>
+
 </body>
 </html>
